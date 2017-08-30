@@ -1,6 +1,6 @@
 {
   "name": "luhn-algorithm",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -45,5 +45,15 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
-  }
+  },
+  "description": "The application that implements the Luhn algorithm for validation credit card number.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimakovalevskyi/luhn-algorithm.git"
+  },
+  "author": "Dmytro Kovalevskyi <dimakovalevskyi@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/dimakovalevskyi/luhn-algorithm/issues"
+  },
+  "homepage": "https://github.com/dimakovalevskyi/luhn-algorithm#readme"
 }
