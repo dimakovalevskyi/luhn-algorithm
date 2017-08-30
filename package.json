@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "postinstall": "npm i -g angular-cli-ghpages && npm install -g @angular/cli",
-    "deploy": "ng build --prod --base-href \"https://dimakovalevskyi.github.io/luhn-algorithm/\" $$ ngh --no-silent",
+    "deploy": "ng build --prod --base-href \"https://dimakovalevskyi.github.io/luhn-algorithm/\" && ngh --no-silent",
     "e2e": "ng e2e"
   },
   "private": true,
