@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.preview-icon {
+  font-size: 200px;
+  width: 200px;
+  height: 200px;
+}
+
+.preview-icon.valid {
+  color: #4aa600;
+}
+
+.preview-icon.invalid {
+  color: #f44336;
+}
+
+.preview-text {
+  font-weight: 300;
+}
+
+.preview-contaier {
+  text-align: center;
+}

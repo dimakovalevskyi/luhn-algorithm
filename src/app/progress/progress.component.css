@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.progress {
+  margin: 15px 0 50px;
+  width: 500px;
+}

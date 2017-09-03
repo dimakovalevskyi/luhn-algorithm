@@ -1,0 +1,7 @@
+<md-form-field class="input-field" floatPlaceholder="always">
+  <input autofocus mdInput #message maxlength="16" minlength="1" placeholder="Enter credit card number here" [(ngModel)]="number" (ngModelChange)="check($event)" [errorStateMatcher]="myErrorStateMatcher">
+  <md-hint align="end">{{message.value.length}} / 16</md-hint>
+  <md-error>
+    Number must consist of <strong>16 digits</strong>
+  </md-error>
+</md-form-field>
