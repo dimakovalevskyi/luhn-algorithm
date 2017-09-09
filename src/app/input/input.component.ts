@@ -19,11 +19,11 @@ export class InputComponent {
      return !isNaN( + number) && number.indexOf('.') === -1
   }
 
-  myErrorStateMatcher = (control: FormControl) => {
+  errorStateMatcher = (control: FormControl) => {
     return control.dirty && ! this.isValidInteger(this.number);
   };
 
   check = () => {
-    this.values.setValue(this.number, this.isValidInteger(this.number));
+    this.values.setValue(this.number, this.isValidInteger(this.number), true);
   }
 }

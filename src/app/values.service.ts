@@ -8,21 +8,15 @@ export class ValuesService {
 
   protected subject: Subject<any> = new Subject();
 
-  protected isVaid: boolean = true;
-  protected number: number;
-  protected luhnResult: boolean = false;
-
   public getSubscription() {
     return this.subject.asObservable();
   }
 
-  public setValue(currentNumber, currentValidity) {
-    this.number = currentNumber;
-    this.isVaid = currentValidity;
-
+  public setValue(currentNumber, currentValidity, luhnResult) {
     this.subject.next({
-      isValid: this.isVaid,
-      number: this.number,
+      isValid: currentValidity,
+      number: currentNumber,
+      luhnResult: luhnResult,
     });
   }
 

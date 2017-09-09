@@ -1,4 +1,4 @@
 <div class="preview-contaier">
-  <md-icon class="preview-icon">credit_card</md-icon>
-  <h2 class="preview-text">Enter valid format (16 digits)</h2>
+  <md-icon class="preview-icon" [ngClass]="{'valid': lenght === 16 && luhnResult, 'invalid':  lenght === 16 && !luhnResult}">credit_card</md-icon>
+  <h2 class="preview-text">{{ title }}</h2>
 </div>

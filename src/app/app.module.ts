@@ -20,7 +20,7 @@ import { AboutComponent } from './about/about.component';
     InputComponent,
     PreviewComponent,
     ProgressComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,10 +30,10 @@ import { AboutComponent } from './about/about.component';
     MdProgressBarModule,
     MdToolbarModule,
     MdButtonModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
-    ValuesService
+    ValuesService,
   ],
   bootstrap: [AppComponent]
 })
