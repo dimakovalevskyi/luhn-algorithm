@@ -3,6 +3,8 @@ The application that implements the Luhn algorithm for validation credit card nu
 
 ![screenshot](http://i.imgur.com/nAq6duq.png)
 
+Visit [Demo](https://dimakovalevskyi.github.io/luhn-algorithm/) and try it youself.
+
 ## How it works ?
 
 > Information from [Wikipedia](https://en.wikipedia.org/wiki/Luhn_algorithm)
