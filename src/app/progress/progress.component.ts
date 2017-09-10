@@ -13,7 +13,7 @@ export class ProgressComponent {
     protected values: ValuesService
   ) {
     this.values.getSubscription().subscribe((data) => {
-      this.color = data.isValid ? 'primary' : 'warn';
+      this.color = data.isValidFormat ? 'primary' : 'warn';
       this.value = (data.number.length / 16) * 100 ;
     })
   }

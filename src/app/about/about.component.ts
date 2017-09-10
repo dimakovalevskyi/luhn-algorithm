@@ -12,7 +12,7 @@ export class AboutComponent {
     protected values: ValuesService
   ) {
     this.values.getSubscription().subscribe((data) => {
-      this.color = data.isValid ? 'primary' : 'warn';
+      this.color = data.isValidFormat ? 'primary' : 'warn';
     })
   }
 

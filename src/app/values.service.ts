@@ -14,9 +14,9 @@ export class ValuesService {
 
   public setValue(currentNumber, currentValidity, luhnResult) {
     this.subject.next({
-      isValid: currentValidity,
       number: currentNumber,
-      luhnResult: luhnResult,
+      isValidFormat: currentValidity,
+      isValidLuhn: luhnResult,
     });
   }
 

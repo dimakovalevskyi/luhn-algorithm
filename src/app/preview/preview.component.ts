@@ -13,9 +13,10 @@ export class PreviewComponent {
   ) {
     this.values.getSubscription().subscribe((data) => {
       this.lenght = data.number.length;
-      this.luhnResult = data.luhnResult;
+      this.luhnResult = data.isValidLuhn;
+      this.validFormat = data.isValidFormat;
 
-      if (this.lenght === 16) {
+      if (this.lenght === 16 && this.validFormat) {
         this.title = this.luhnResult ? 'This is valid credit card number' : 'This is invalid credit card number';
       } else {
         this.title = 'Enter valid format (16 digits)';
@@ -26,5 +27,6 @@ export class PreviewComponent {
   title = 'Enter valid format (16 digits)';
   lenght = 0;
   luhnResult = false;
+  validFormat = false;
 
 }

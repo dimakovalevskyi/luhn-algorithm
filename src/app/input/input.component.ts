@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ValuesService } from './../values.service'
+import { LuhnService } from './../luhn.service'
 
 @Component({
   selector: 'app-input',
@@ -15,15 +16,11 @@ export class InputComponent {
 
   number: string = '';
 
-  protected isValidInteger(number) {
-     return !isNaN( + number) && number.indexOf('.') === -1
-  }
-
-  errorStateMatcher = (control: FormControl) => {
-    return control.dirty && ! this.isValidInteger(this.number);
+  errorStateMatcher(control: FormControl) {
+    return control.dirty && (!LuhnService.isValidInteger(control.value));
   };
 
-  check = () => {
-    this.values.setValue(this.number, this.isValidInteger(this.number), true);
-  }
+  check() {
+    this.values.setValue(this.number, LuhnService.isValidInteger(this.number), LuhnService.check(this.number));
+  };
 }

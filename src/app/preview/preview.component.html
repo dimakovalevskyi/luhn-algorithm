@@ -1,4 +1,4 @@
 <div class="preview-contaier">
-  <md-icon class="preview-icon" [ngClass]="{'valid': lenght === 16 && luhnResult, 'invalid':  lenght === 16 && !luhnResult}">credit_card</md-icon>
+  <md-icon class="preview-icon" [ngClass]="{'valid': lenght === 16 && validFormat && luhnResult, 'invalid':  lenght === 16 && validFormat && !luhnResult}">credit_card</md-icon>
   <h2 class="preview-text">{{ title }}</h2>
 </div>
