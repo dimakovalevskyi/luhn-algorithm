@@ -32,14 +32,14 @@ export class LuhnService {
       return false;
     }
 
-    const array: Array<number> = this.transformStringIntoArray(number);
+    let array: Array<number> = this.transformStringIntoArray(number);
     const length: number = array.length;
 
     if (length === 0) {
       return false;
     }
 
-    array.forEach((item, index) => {
+    array = array.map((item, index) => {
       if (this.isEven(index)) {
         item = item * 2;
 
@@ -47,6 +47,7 @@ export class LuhnService {
           item = item - 9;
         }
       }
+      return item
     });
 
     let summ = array.reduce((sum, currentItem) => {
